@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Mon Mega Hub Extension",
+  "version": "1.0",
+  "description": "Prolongez votre expérience Mon Mega Hub sur le Web.",
+  "permissions": [
+    "storage",
+    "notifications",
+    "identity",
+    "cookies",
+    "alarms",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.google.com/*",
+    "https://*.google.fr/*",
+    "http://localhost:3000/*",
+    "https://mon-mega-hub.vercel.app/*",
+    "https://mveepfuvayqpwifixjuw.supabase.co/*",
+    "https://api.themoviedb.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/search?*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}

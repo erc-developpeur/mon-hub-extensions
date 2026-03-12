@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="ios-theme">
+  <div class="popup-container">
+    <header>
+      <div class="header-content">
+        <img src="../assets/icon48.png" alt="Logo" class="app-icon">
+        <div class="app-info">
+          <h1>Mega Hub</h1>
+          <p id="status-text">Connecté au Hub</p>
+        </div>
+      </div>
+      <div class="battery-sim">
+        <div class="signal"></div>
+        <div class="wifi"></div>
+        <div class="battery"></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="ios-card-stack">
+        <section class="notification-center">
+          <h2>Notifications</h2>
+          <div id="notification-list" class="empty-state">
+            <p>Aucune notification</p>
+          </div>
+        </section>
+
+        <section class="quick-actions">
+          <div class="action-grid">
+            <button class="action-btn" id="btn-watchlist">
+              <div class="btn-icon">📺</div>
+              <span>Watchlist</span>
+            </button>
+            <button class="action-btn" id="btn-compare">
+              <div class="btn-icon">⚖️</div>
+              <span>Compare</span>
+            </button>
+            <button class="action-btn" id="btn-finder">
+              <div class="btn-icon">🔍</div>
+              <span>Finder</span>
+            </button>
+            <button class="action-btn" id="btn-agenda">
+              <div class="btn-icon">📅</div>
+              <span>Agenda</span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <button id="btn-open-hub" class="ios-button-primary">Ouvrir le Hub</button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

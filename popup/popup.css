@@ -1,0 +1,163 @@
+/* Popup Styles - iOS Inspired */
+
+:root {
+    --ios-bg: rgba(242, 242, 247, 0.8);
+    --ios-card: rgba(255, 255, 255, 0.7);
+    --ios-blue: #007aff;
+    --ios-text: #000;
+    --ios-text-sec: #8e8e93;
+    --glass: blur(20px);
+}
+
+body {
+    width: 350px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--ios-bg);
+    color: var(--ios-text);
+    overflow: hidden;
+}
+
+.popup-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    backdrop-filter: var(--glass);
+}
+
+header {
+    padding: 20px 16px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.app-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#status-text {
+    margin: 0;
+    font-size: 12px;
+    color: var(--ios-text-sec);
+}
+
+/* iOS Cards */
+.ios-card-stack {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--ios-text-sec);
+    margin-left: 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.notification-center,
+.quick-actions {
+    background: var(--ios-card);
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 20px;
+    color: var(--ios-text-sec);
+    font-size: 14px;
+}
+
+/* Action Grid */
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.action-btn {
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.action-btn:active {
+    transform: scale(0.9);
+}
+
+.btn-icon {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.action-btn span {
+    font-size: 10px;
+    color: var(--ios-text);
+    font-weight: 500;
+}
+
+/* Buttons */
+footer {
+    margin-top: auto;
+    padding: 16px;
+}
+
+.ios-button-primary {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background: var(--ios-blue);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.ios-button-primary:hover {
+    opacity: 0.9;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --ios-bg: rgba(0, 0, 0, 0.8);
+        --ios-card: rgba(28, 28, 30, 0.8);
+        --ios-text: #fff;
+        --ios-text-sec: #98989d;
+    }
+}
