@@ -1,81 +1,65 @@
-# Mon Mega Hub — Extension Chrome
+<h1 align="center">Mon Mega Hub — Chrome Extension</h1>
 
-> Extension de navigateur (Manifest V3) qui prolonge l'expérience **Mon Mega Hub** directement sur le Web.
+<p align="center">
+  <b>Bring Mon Mega Hub directly into your browser.</b><br/>
+  Enhance your Google searches with movie, series & anime recommendations — powered by Mon Mega Hub.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Manifest-V3-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Chrome-Extension-yellow?style=flat-square&logo=googlechrome" />
+  <img src="https://img.shields.io/badge/Version-1.0-green?style=flat-square" />
+</p>
 
 ---
 
-## ✨ Fonctionnalités
+## 🌟 What does it do?
 
-- 🔍 **Injection Google Search** — Ajoute un bouton Mon Mega Hub sur les résultats Google pour accéder rapidement à la watchlist, aux comparaisons et aux contenus similaires.
-- 🔔 **Notifications iOS-style** — Notifications visuelles inspirées du design Apple iOS.
-- 🔐 **Synchronisation de session** — Maintient la connexion utilisateur en synchronisant le token d'authentification avec le site.
-- 🎨 **Design cohérent** — Interface qui mêle l'esthétique de Mon Mega Hub avec le langage visuel d'Apple iOS.
+**Mon Mega Hub Extension** seamlessly integrates the Mon Mega Hub platform into your daily browsing:
+
+- 🔍 **Google Search integration** — A button appears directly on Google search results, letting you instantly add movies, series, or anime to your watchlist, compare titles, or find similar content.
+- 🔔 **iOS-style notifications** — Get elegant, non-intrusive notifications inspired by Apple's design language.
+- 🔐 **Stays logged in** — Your session is automatically synced with the Mon Mega Hub website. No need to log in twice.
+- 🎨 **Seamless design** — The extension blends Mon Mega Hub's visual style with a clean, modern iOS-inspired UI.
 
 ---
 
-## 📁 Structure du projet
+## 🚀 Installation
+
+> **Requirements:** Google Chrome (or any Chromium-based browser)
+
+1. **Download** this repository (ZIP or `git clone`)
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable **Developer mode** (top-right toggle)
+4. Click **"Load unpacked"**
+5. Select the `Extension/` folder
+6. The extension icon will appear in your toolbar ✅
+
+---
+
+## 📁 Project Structure
 
 ```
 Extension/
-├── assets/              # Icônes de l'extension (16, 48, 128px)
+├── assets/          # Extension icons
 ├── popup/
-│   ├── popup.html       # Interface de la popup
-│   ├── popup.css        # Styles de la popup
-│   └── popup.js         # Logique de la popup
-├── background.js        # Service worker (gestion auth, notifications, alarms)
-├── content.js           # Script injecté sur Google Search
-├── content.css          # Styles injectés sur Google Search
-├── manifest.json        # Configuration de l'extension (Manifest V3)
-└── .gitignore
+│   ├── popup.html   # Popup UI
+│   ├── popup.css    # Popup styles
+│   └── popup.js     # Popup logic
+├── background.js    # Service worker (auth sync, notifications)
+├── content.js       # Injected script on Google Search
+├── content.css      # Injected styles on Google Search
+└── manifest.json    # Extension configuration (Manifest V3)
 ```
 
 ---
 
-## 🚀 Installation (mode développeur)
+## 🔗 Related
 
-1. Clone le dépôt :
-   ```bash
-   git clone https://github.com/erc-developpeur/mon-hub-extensions.git
-   ```
-2. Ouvre **Chrome** → `chrome://extensions/`
-3. Active le **Mode développeur** (en haut à droite)
-4. Clique sur **« Charger l'extension non empaquetée »**
-5. Sélectionne le dossier `Extension/`
+- 🌐 **Website:** [mon-mega-hub.vercel.app](https://mon-mega-hub.vercel.app)
 
 ---
 
-## 🔗 Permissions requises
+## 📄 License
 
-| Permission | Utilisation |
-|---|---|
-| `storage` | Sauvegarde des préférences utilisateur |
-| `notifications` | Notifications système |
-| `identity` | Authentification |
-| `cookies` | Lecture du token de session |
-| `alarms` | Tâches périodiques (refresh token) |
-| `tabs` | Navigation entre onglets |
-
----
-
-## 🌐 Hôtes autorisés
-
-- `google.com` / `google.fr` — Injection du bouton dans les résultats
-- `mon-mega-hub.vercel.app` — API principale
-- `localhost:3000` — Serveur de développement local
-- `supabase.co` — Base de données / Auth
-- `api.themoviedb.org` — Données films & séries (TMDB)
-
----
-
-## 🛠️ Technologies
-
-- **Manifest V3** (Chrome Extensions API)
-- **Vanilla JS / CSS**
-- **Supabase** (Auth & DB)
-- **TMDB API**
-
----
-
-## 📄 Licence
-
-Projet privé — © Mon Mega Hub
+This project is proprietary. All rights reserved — © Mon Mega Hub.
